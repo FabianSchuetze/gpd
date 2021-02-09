@@ -330,6 +330,7 @@ std::vector<std::unique_ptr<candidate::Hand>> GraspDetector::detectGrasps(
     printf(" TOTAL: %3.4fs\n", t_total);
 
     if (plot_selected_grasps_) {
+        std::cout << "plotting the selected grasphs" << std::endl;
         plotter_->plotFingers3D(clusters, cloud.getCloudOriginal(),
                                 "Selected Grasps", hand_geom, false);
     }
